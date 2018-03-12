@@ -18,7 +18,8 @@ var templateServiceModule = {
                         asserts="{{asserts}}" 
                         run-date="{{runDate}}" 
                         start-time="{{startTime}}">
-                    </test-run>`
+                    </test-run>`,
+        "test-case": ``
     },
 
     get: function(templateName) {
