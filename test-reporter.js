@@ -1,4 +1,4 @@
-var myReporter = {
+var testReporter = {
     jasmineStarted: function(suiteInfo) {
 
     },
@@ -13,4 +13,4 @@ var myReporter = {
     },
 }
     
-jasmine.getEnv().addReporter(myReporter);
+module.exports = testReporter;
