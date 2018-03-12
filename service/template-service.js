@@ -1,29 +1,27 @@
 var Handlebars = require('handlebars');
+var FileReader = require('./file-reader');
 
 var templateServiceModule = {
 
-    templateSources: {
-        "test-run": `<test-run 
-                        id="{{id}}" 
-                        name="{{name}}" 
-                        fullname="{{fullname}}" 
-                        testcasecount="{{testCaseCount}}" 
-                        result="{{result}}" 
-                        time="{{time}}" 
-                        total="{{total}}" 
-                        passed="{{passed}}" 
-                        failed="{{failed}}" 
-                        inconclusive="{{inconclusive}}" 
-                        skipped="{{skipped}}" 
-                        asserts="{{asserts}}" 
-                        run-date="{{runDate}}" 
-                        start-time="{{startTime}}">
-                    </test-run>`,
-        "test-case": ``
-    },
+    templateBasePath: process.cwd() + "/templates/",
+    compiledTemplates: {},
 
     get: function(templateName) {
-        return Handlebars.compile(this.templateSources[templateName]);
+        if(this.compiledTemplates.hasOwnProperty(templateName)) {
+            return this.compiledTemplates[templateName];
+        } else {
+            throw new Error("The requested template has not been registered!");
+        }
+    },
+
+    init: function() {
+        var testRun = FileReader.readAsString(this.templateBasePath + "test-run.hbs");
+        var testCase = FileReader.readAsString(this.templateBasePath + "test-case.hbs");
+
+        this.compiledTemplates = {
+            "test-run": Handlebars.compile(testRun),
+            "test-case": Handlebars.compile(testCase)
+        }
     }
 }
 

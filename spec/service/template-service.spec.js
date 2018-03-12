@@ -4,11 +4,12 @@ describe("Template service tests", function() {
 
     beforeEach(function() {
         this.templateService = require("../../service/template-service")
+        this.templateService.init();
     })
 
     describe("When service is created user can get compiled template: ", function() {
 
-        var expectedTemplates = ["test-run"];
+        var expectedTemplates = ["test-run", "test-case"];
         var templateDirectory = "templates";
 
         expectedTemplates.forEach(templateName => {
@@ -21,7 +22,11 @@ describe("Template service tests", function() {
 
         var contexts = {
             "test-run": {
-                id: "myId",
+                id: "testRunId",
+                name: "myName"
+            },
+            "test-case": {
+                id: "testCaseId",
                 name: "myName"
             }
         }
@@ -39,7 +44,7 @@ describe("Template service tests", function() {
 
     describe("When user gets uncompiled template", function() {
         it(`exception is thrown`, function() {
-            expect(() => { this.templateService.get("Non existant template");}).toThrowError(/You must pass a string or Handlebars AST/);
+            expect(() => { this.templateService.get("Non existant template");}).toThrowError(/The requested template has not been registered!/);
         });
     });
 });  
