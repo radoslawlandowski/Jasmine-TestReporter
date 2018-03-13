@@ -5,8 +5,8 @@ describe("File reader tests", function() {
     })
 
     describe("When user loads file", function() {
-        it(`it is read as string`, function() {
-            expect(this.fileReader.readAsString(process.cwd() + "/spec/resources/example.hbs")).toEqual("<lol>OMG</lol>");
+        it(`it is returned as string`, function() {
+            expect(this.fileReader.readAsString(`${process.cwd()}/spec/resources/example.hbs`)).toEqual("<lol>OMG</lol>");
         });
     });
 });  

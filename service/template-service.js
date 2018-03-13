@@ -3,7 +3,7 @@ var FileReader = require('./file-reader');
 
 var templateServiceModule = {
 
-    templateBasePath: process.cwd() + "/templates/",
+    templateBasePath: `${process.cwd()}/templates/`,
     compiledTemplates: {},
 
     get: function(templateName) {
@@ -15,12 +15,14 @@ var templateServiceModule = {
     },
 
     init: function() {
-        var testRun = FileReader.readAsString(this.templateBasePath + "test-run.hbs");
-        var testCase = FileReader.readAsString(this.templateBasePath + "test-case.hbs");
+        var testRunSource = FileReader.readAsString(`${this.templateBasePath}/test-run.hbs`);
+        var testCaseSource = FileReader.readAsString(`${this.templateBasePath}/test-case.hbs`);
+        var propertiesSource = FileReader.readAsString(`${this.templateBasePath}/properties.hbs`);
 
         this.compiledTemplates = {
-            "test-run": Handlebars.compile(testRun),
-            "test-case": Handlebars.compile(testCase)
+            "test-run": Handlebars.compile(testRunSource),
+            "test-case": Handlebars.compile(testCaseSource),
+            "properties": Handlebars.compile(propertiesSource)
         }
     }
 }

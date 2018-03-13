@@ -44,7 +44,7 @@ describe("Template service tests", function() {
 
     describe("When user gets uncompiled template", function() {
         it(`exception is thrown`, function() {
-            expect(() => { this.templateService.get("Non existant template");}).toThrowError(/The requested template has not been registered!/);
+            expect(() => { this.templateService.get("Non existant template") }).toThrowError(/The requested template has not been registered!/);
         });
     });
 });  

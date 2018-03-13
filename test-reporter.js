@@ -1,4 +1,5 @@
 var testReporter = {
+    
     jasmineStarted: function(suiteInfo) {
 
     },
