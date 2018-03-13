@@ -3,6 +3,8 @@ var TestSuite = require("./model/test-suite");
 var TestCase = require("./model/test-case");
 var TemplateService = require("./service/template-service");
 var FileService = require("./service/file-service");
+var TestSuiteMapper = require("./service/mappers/test-suite-mapper");
+var TestCaseMapper = require("./service/mappers/test-case-mapper");
 
 var testReporter = {
     
@@ -13,12 +15,14 @@ var testReporter = {
     },
 
     suiteStarted: function(result) {
-        this.testRun.testSuite.addTestSuite(new TestSuite(1, "testSuite"));
+        var testSuite = TestSuiteMapper.mapSuite(result);
+        this.testRun.testSuite.addTestSuite(testSuite);
     },
 
     specStarted: function(result) {
+        var testCase = TestCaseMapper.mapSpec(result);
         var suitesCount = this.testRun.testSuite.testSuites.length;
-        this.testRun.testSuite.testSuites[suitesCount - 1].addTestCase(new TestCase(1, "testCase"))
+        this.testRun.testSuite.testSuites[suitesCount - 1].addTestCase(testCase);
     },
 
     specDone: function(result) {
@@ -37,7 +41,5 @@ var testReporter = {
     }
 }
 
-//jasmine.getEnv().addReporter(testReporter);
-    
 module.exports = testReporter;
 

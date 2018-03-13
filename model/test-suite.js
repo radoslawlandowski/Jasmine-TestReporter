@@ -7,6 +7,7 @@ class TestSuite {
         this.testCases = [];
         this.testSuites = [];
         this.properties = [];
+        this.isDone = false;
     }
 
     addTestCase(testCase) {
@@ -15,6 +16,10 @@ class TestSuite {
 
     addTestSuite(testSuite) {
         this.testSuites.push(testSuite);
+    }
+
+    setDone() {
+        this.isDone = true;
     }
 }
 
