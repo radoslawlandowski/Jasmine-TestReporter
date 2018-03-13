@@ -1,11 +1,11 @@
 describe("Test reporter tests", function() {
 
-    beforeEach(function() {
-        this.testReporter = require("../test-reporter");
-    });
-
     describe("test-reporter module", function () {
 
+        beforeEach(function() {
+            this.testReporter = require("../test-reporter");
+        });
+        
         var expectedCallbacks = 
             ["specStarted", 
             "specDone", 
@@ -19,14 +19,72 @@ describe("Test reporter tests", function() {
         })
     });
 
-    describe("When test suite is started", function() {
-        it("main result skeleton is created", function() {
+    describe("When jasmine is started", function() {
+        beforeEach(function() {
+            this.testReporter = require("../test-reporter");
         });
+
+        it("test run model is created", function() {
+            var suiteInfo = {};
+
+            this.testReporter.jasmineStarted(suiteInfo);
+
+            expect(this.testReporter.testRun).toBeDefined();
+        });
+
+        it("main test suite is added to test run", function() {
+            var suiteInfo = {};
+
+            this.testReporter.jasmineStarted(suiteInfo);
+
+            expect(this.testReporter.testRun.testSuite).toBeDefined();
+        });
+
+        afterEach(function() {
+            this.testReporter.jasmineDone({});
+        })
     });
 
-    describe("When test case is executed", function() {
-        it("it's added to result summary", function() {
+    describe("When test suite is started", function() {
+
+        beforeEach(function() {
+            this.testReporter = require("../test-reporter");
         });
+
+        it("test suite object is added to the main testsuite", function() {
+            var suiteInfo = {};
+            var result = {};
+
+            this.testReporter.jasmineStarted(suiteInfo);
+            this.testReporter.suiteStarted(result);
+
+            expect(this.testReporter.testRun.testSuite.testSuites.length).toEqual(1);
+        });
+
+        afterEach(function() {
+            this.testReporter.jasmineDone({});
+        })
+    });
+
+    describe("When test case is started", function() {
+        beforeEach(function() {
+            this.testReporter = require("../test-reporter");
+        });
+
+        it("it's added to the test suite", function() {
+            var suiteInfo = {};
+            var result = {};
+
+            this.testReporter.jasmineStarted(suiteInfo);
+            this.testReporter.suiteStarted(result);
+            this.testReporter.specStarted(result);
+
+            expect(this.testReporter.testRun.testSuite.testSuites[0].testCases.length).toEqual(1);
+        });
+
+        afterEach(function() {
+            this.testReporter.jasmineDone({});
+        })
     });
 
     describe("When test case run has test suites", function() {
@@ -50,6 +108,7 @@ describe("Test reporter tests", function() {
 
     describe("When test run is done", function() {
         it("the result file is saved in the given directory", function() {
+            
         });
 
         it("the screenshots are in proper folder", function() {
