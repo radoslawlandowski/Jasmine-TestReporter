@@ -4,7 +4,7 @@ var testCaseMapperModule = {
     mapSpec: function(spec) {
         return new TestCase(spec.id, 
             spec.description, 
-            spec.fullname,
+            spec.fullName,
             spec.status,
             null,
             null,

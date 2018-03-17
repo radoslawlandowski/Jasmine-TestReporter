@@ -1,18 +1,4 @@
-<test-suite 
-    type="{{type}}" 
-    id="{{id}}" 
-    name="{{name}}" 
-    fullname="{{fullName}}" 
-    testcasecount="{{testCaseCount}}" 
-    result="{{result}}" 
-    time="{{time}}" 
-    total="{{total}}" 
-    passed="{{passed}}" 
-    failed="{{failed}}" 
-    inconclusive="{{inconclusive}}" 
-    skipped="{{skipped}}" 
-    asserts="{{asserts}}">
-
+<test-suite type="{{type}}" id="{{id}}" name="{{name}}" fullname="{{fullname}}" testcasecount="{{testCaseCount}}" result="{{result}}" time="{{time}}" total="{{total}}" passed="{{passed}}" failed="{{failed}}" inconclusive="{{inconclusive}}" skipped="{{skipped}}" asserts="{{asserts}}">
     {{#if properties }} {{> properties }} {{/if}}
 
     {{#each testCases}}
@@ -22,5 +8,4 @@
     {{#each testSuites}}
         {{> test-suite }}
     {{/each}}
-
 </test-suite>

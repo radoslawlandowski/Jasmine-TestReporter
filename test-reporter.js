@@ -20,13 +20,17 @@ var testReporter = {
     },
 
     specStarted: function(result) {
-        var testCase = TestCaseMapper.mapSpec(result);
-        var suitesCount = this.testRun.testSuite.testSuites.length;
-        this.testRun.testSuite.testSuites[suitesCount - 1].addTestCase(testCase);
+
     },
 
     specDone: function(result) {
-    
+        var testCase = TestCaseMapper.mapSpec(result);
+        var suitesCount = this.testRun.testSuite.testSuites.length;
+        this.testRun.testSuite.testSuites[suitesCount - 1].addTestCase(testCase);
+        
+        if(result.status === "failed") {
+            
+        }
     },
     
     suiteDone: function(result) {

@@ -1,818 +1,203 @@
-<test-run 
-    id="1" 
-    name="testRun" 
-    fullname="" 
-    testcasecount="" 
-    result="" 
-    time="" 
-    total="" 
-    passed="" 
-    failed="" 
-    inconclusive="" 
-    skipped="" 
-    asserts="" 
-    run-date="" 
-    start-time="">
-
-    <test-suite 
-        type="" 
-        id="1" 
-        name="testSuite" 
-        fullname="" 
-        testcasecount="" 
-        result="" 
-        time="" 
-        total="" 
-        passed="" 
-        failed="" 
-        inconclusive="" 
-        skipped="" 
-        asserts="">
-    
+<test-run id="1" name="testRun" fullname="" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="" run-date="" start-time="">
+    <test-suite type="" id="1" name="testSuite" fullname="" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
         
     
     
-            <test-suite 
-                type="" 
-                id="suite1" 
-                name="Fake spec" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite1" name="Fake spec" fullname="Fake spec" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec0" 
-                        name="test run model is created" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec0" name="test run model is created" fullname="Fake spec test run model is created" result="failed" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec1" 
-                        name="main test suite is added to test run" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec1" name="main test suite is added to test run" fullname="Fake spec main test suite is added to test run" result="passed" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite11" 
-                name="Template service tests" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite2" name="Fake spec" fullname="Fake spec" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-            
-            
-            </test-suite>
-            <test-suite 
-                type="" 
-                id="suite13" 
-                name="When user gets uncompiled template" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
-                
-            
-                    <test-case 
-                        id="spec18" 
-                        name="exception is thrown" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec2" name="test run model is created" fullname="Fake spec test run model is created" result="failed" time="0" asserts="0">
                       
-                    
+                    </test-case>        <test-case id="spec3" name="main test suite is added to test run" fullname="Fake spec main test suite is added to test run" result="passed" time="0" asserts="0">
+                      
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite12" 
-                name="When service is created user can get compiled template: " 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite3" name="Fake spec" fullname="Fake spec" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec17" 
-                        name="&#x27;test-case&#x27; and fill it with context properly" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec4" name="test run model is created" fullname="Fake spec test run model is created" result="failed" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec14" 
-                        name="&#x27;test-run&#x27;" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec5" name="main test suite is added to test run" fullname="Fake spec main test suite is added to test run" result="passed" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec16" 
-                        name="&#x27;test-run&#x27; and fill it with context properly" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec15" 
-                        name="&#x27;test-case&#x27;" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite2" 
-                name="When user puts context into test-case partial" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite16" name="Test reporter tests" fullname="Test reporter tests" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec4" 
-                        name="and the properties array has no elements, the properties partial is not injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+            
+            </test-suite>
+            <test-suite type="" id="suite17" name="test-reporter module" fullname="Test reporter tests test-reporter module" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+                
+            
+                    <test-case id="spec23" name="has the &#x27;specStarted&#x27; callback defined" fullname="Test reporter tests test-reporter module has the &#x27;specStarted&#x27; callback defined" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec2" 
-                        name="the &#x27;properties&#x27; partial is nested within it" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec24" name="has the &#x27;specDone&#x27; callback defined" fullname="Test reporter tests test-reporter module has the &#x27;specDone&#x27; callback defined" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec3" 
-                        name="and there are no properties defined, the properties partial is not injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec25" name="has the &#x27;suiteStarted&#x27; callback defined" fullname="Test reporter tests test-reporter module has the &#x27;suiteStarted&#x27; callback defined" result="excluded" time="0" asserts="0">
                       
-                    
+                    </test-case>        <test-case id="spec26" name="has the &#x27;jasmineStarted&#x27; callback defined" fullname="Test reporter tests test-reporter module has the &#x27;jasmineStarted&#x27; callback defined" result="excluded" time="0" asserts="0">
+                      
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite14" 
-                name="Test reporter tests" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite18" name="When jasmine is started" fullname="Test reporter tests When jasmine is started" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-            
-            
-            </test-suite>
-            <test-suite 
-                type="" 
-                id="suite22" 
-                name="When test run is done" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
-                
-            
-                    <test-case 
-                        id="spec31" 
-                        name="the result file is saved in the given directory" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec27" name="test run model is created" fullname="Test reporter tests When jasmine is started test run model is created" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec32" 
-                        name="the screenshots are in proper folder" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec28" name="main test suite is added to test run" fullname="Test reporter tests When jasmine is started main test suite is added to test run" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec33" 
-                        name="the result file with screenshot folder is zipped into archive" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite17" 
-                name="When test suite is started" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite20" name="When test case is started" fullname="Test reporter tests When test case is started" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec25" 
-                        name="test suite object is added to the main testsuite" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec30" name="it&#x27;s added to the test suite" fullname="Test reporter tests When test case is started it&#x27;s added to the test suite" result="excluded" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite16" 
-                name="When jasmine is started" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite22" name="When test case passes" fullname="Test reporter tests When test case passes" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec24" 
-                        name="main test suite is added to test run" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec33" name="the screenshot is not made and no new file made" fullname="Test reporter tests When test case passes the screenshot is not made and no new file made" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec23" 
-                        name="test run model is created" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite15" 
-                name="test-reporter module" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite21" name="When test case run has test suites" fullname="Test reporter tests When test case run has test suites" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec19" 
-                        name="has the &#x27;specStarted&#x27; callback defined" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec31" name="they exist in a summary" fullname="Test reporter tests When test case run has test suites they exist in a summary" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec20" 
-                        name="has the &#x27;specDone&#x27; callback defined" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    </test-case>        <test-case id="spec32" name="they have test cases setup inside them" fullname="Test reporter tests When test case run has test suites they have test cases setup inside them" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec21" 
-                        name="has the &#x27;suiteStarted&#x27; callback defined" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec22" 
-                        name="has the &#x27;jasmineStarted&#x27; callback defined" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite21" 
-                name="When test case fails" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite24" name="When test run is done" fullname="Test reporter tests When test run is done" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec30" 
-                        name="the screenshot is made and saved to file" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec35" name="the result file is saved in the given directory" fullname="Test reporter tests When test run is done the result file is saved in the given directory" result="excluded" time="0" asserts="0">
                       
-                    
+                    </test-case>        <test-case id="spec36" name="the screenshots are in proper folder" fullname="Test reporter tests When test run is done the screenshots are in proper folder" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec37" name="the result file with screenshot folder is zipped into archive" fullname="Test reporter tests When test run is done the result file with screenshot folder is zipped into archive" result="excluded" time="0" asserts="0">
+                      
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite20" 
-                name="When test case passes" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite23" name="When test case fails" fullname="Test reporter tests When test case fails" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec29" 
-                        name="the screenshot is not made and no new file made" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec34" name="the screenshot is made and saved to file" fullname="Test reporter tests When test case fails the screenshot is made and saved to file" result="excluded" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite19" 
-                name="When test case run has test suites" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite19" name="When test suite is started" fullname="Test reporter tests When test suite is started" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec27" 
-                        name="they exist in a summary" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec29" name="test suite object is added to the main testsuite" fullname="Test reporter tests When test suite is started test suite object is added to the main testsuite" result="excluded" time="0" asserts="0">
                       
-                    
-                    </test-case>        <test-case 
-                        id="spec28" 
-                        name="they have test cases setup inside them" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite18" 
-                name="When test case is started" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite13" name="Template service tests" fullname="Template service tests" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec26" 
-                        name="it&#x27;s added to the test suite" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+            
+            </test-suite>
+            <test-suite type="" id="suite15" name="When user gets uncompiled template" fullname="Template service tests When user gets uncompiled template" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+                
+            
+                    <test-case id="spec22" name="exception is thrown" fullname="Template service tests When user gets uncompiled template exception is thrown" result="excluded" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite9" 
-                name="Test suite mapper tests" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite14" name="When service is created user can get compiled template: " fullname="Template service tests When service is created user can get compiled template: " testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-            
-            
-            </test-suite>
-            <test-suite 
-                type="" 
-                id="suite10" 
-                name="When jasmine suite is passed" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
-                
-            
-                    <test-case 
-                        id="spec13" 
-                        name="TestSuite object is returned" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec20" name="&#x27;test-run&#x27; and fill it with context properly" fullname="Template service tests When service is created user can get compiled template:  &#x27;test-run&#x27; and fill it with context properly" result="excluded" time="0" asserts="0">
                       
-                    
+                    </test-case>        <test-case id="spec21" name="&#x27;test-case&#x27; and fill it with context properly" fullname="Template service tests When service is created user can get compiled template:  &#x27;test-case&#x27; and fill it with context properly" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec19" name="&#x27;test-case&#x27;" fullname="Template service tests When service is created user can get compiled template:  &#x27;test-case&#x27;" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec18" name="&#x27;test-run&#x27;" fullname="Template service tests When service is created user can get compiled template:  &#x27;test-run&#x27;" result="excluded" time="0" asserts="0">
+                      
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite7" 
-                name="Test case mapper tests" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite9" name="Test case mapper tests" fullname="Test case mapper tests" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
             
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite8" 
-                name="When jasmine spec is passed" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite10" name="When jasmine spec is passed" fullname="Test case mapper tests When jasmine spec is passed" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec12" 
-                        name="TestCase object is returned" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec16" name="TestCase object is returned" fullname="Test case mapper tests When jasmine spec is passed TestCase object is returned" result="excluded" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite5" 
-                name="File reader tests" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite11" name="Test suite mapper tests" fullname="Test suite mapper tests" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
             
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite6" 
-                name="When user loads file" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite12" name="When jasmine suite is passed" fullname="Test suite mapper tests When jasmine suite is passed" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec11" 
-                        name="it is returned as string" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec17" name="TestSuite object is returned" fullname="Test suite mapper tests When jasmine suite is passed TestSuite object is returned" result="excluded" time="0" asserts="0">
                       
-                    
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite3" 
-                name="When user puts context into test-run partial" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite4" name="When user puts context into test-case partial" fullname="When user puts context into test-case partial" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec5" 
-                        name="the main &#x27;test-suite&#x27; partial is nested within it" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
+                    <test-case id="spec8" name="and the properties array has no elements, the properties partial is not injected" fullname="When user puts context into test-case partial and the properties array has no elements, the properties partial is not injected" result="excluded" time="0" asserts="0">
                       
-                    
+                    </test-case>        <test-case id="spec7" name="and there are no properties defined, the properties partial is not injected" fullname="When user puts context into test-case partial and there are no properties defined, the properties partial is not injected" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec6" name="the &#x27;properties&#x27; partial is nested within it" fullname="When user puts context into test-case partial the &#x27;properties&#x27; partial is nested within it" result="excluded" time="0" asserts="0">
+                      
                     </test-case>
-            
             </test-suite>
-            <test-suite 
-                type="" 
-                id="suite4" 
-                name="When user puts context into test-suite partial" 
-                fullname="" 
-                testcasecount="" 
-                result="" 
-                time="" 
-                total="" 
-                passed="" 
-                failed="" 
-                inconclusive="" 
-                skipped="" 
-                asserts="">
-            
+            <test-suite type="" id="suite7" name="File reader tests" fullname="File reader tests" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
                 
             
-                    <test-case 
-                        id="spec7" 
-                        name="and there are no test cases defined, no test case partial is injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec9" 
-                        name="and it contains properties, the properties partial is injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec8" 
-                        name="and the test cases array has no elements, no test case partial is injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec10" 
-                        name="and it contains nested test suites, the proper count of partials is injected" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>        <test-case 
-                        id="spec6" 
-                        name="the &#x27;test-case&#x27; partial is nested within it" 
-                        fullname="" 
-                        result="" 
-                        time="0" 
-                        asserts="0">
-                    
-                      
-                    
-                    </test-case>
             
             </test-suite>
-    
+            <test-suite type="" id="suite8" name="When user loads file" fullname="File reader tests When user loads file" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+                
+            
+                    <test-case id="spec15" name="it is returned as string" fullname="File reader tests When user loads file it is returned as string" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>
+            </test-suite>
+            <test-suite type="" id="suite5" name="When user puts context into test-run partial" fullname="When user puts context into test-run partial" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+                
+            
+                    <test-case id="spec9" name="the main &#x27;test-suite&#x27; partial is nested within it" fullname="When user puts context into test-run partial the main &#x27;test-suite&#x27; partial is nested within it" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>
+            </test-suite>
+            <test-suite type="" id="suite6" name="When user puts context into test-suite partial" fullname="When user puts context into test-suite partial" testcasecount="" result="" time="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+                
+            
+                    <test-case id="spec10" name="the &#x27;test-case&#x27; partial is nested within it" fullname="When user puts context into test-suite partial the &#x27;test-case&#x27; partial is nested within it" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec12" name="and the test cases array has no elements, no test case partial is injected" fullname="When user puts context into test-suite partial and the test cases array has no elements, no test case partial is injected" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec14" name="and it contains nested test suites, the proper count of partials is injected" fullname="When user puts context into test-suite partial and it contains nested test suites, the proper count of partials is injected" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec11" name="and there are no test cases defined, no test case partial is injected" fullname="When user puts context into test-suite partial and there are no test cases defined, no test case partial is injected" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>        <test-case id="spec13" name="and it contains properties, the properties partial is injected" fullname="When user puts context into test-suite partial and it contains properties, the properties partial is injected" result="excluded" time="0" asserts="0">
+                      
+                    </test-case>
+            </test-suite>
     </test-suite>
-
 </test-run>
