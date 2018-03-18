@@ -86,6 +86,27 @@ describe("Test reporter tests", function() {
             this.testReporter.jasmineDone({});
         })
     });
+    
+    describe("When test case is started", function() {
+        beforeEach(function() {
+            this.testReporter = require("../test-reporter");
+        });
+
+        it("it's added to the test suite", function() {
+            var suiteInfo = {};
+            var result = {};
+
+            this.testReporter.jasmineStarted(suiteInfo);
+            this.testReporter.suiteStarted(result);
+            this.testReporter.specStarted(result);
+
+            expect(this.testReporter.testRun.testSuite.testSuites[0].testCases.length).toEqual(1);
+        });
+
+        afterEach(function() {
+            this.testReporter.jasmineDone({});
+        })
+    });
 
     describe("When test case run has test suites", function() {
         it("they exist in a summary", function() {
