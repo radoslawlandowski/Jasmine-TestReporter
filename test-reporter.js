@@ -79,9 +79,10 @@ var testReporter = {
 
     jasmineDone: function(result) {
         TemplateService.init();
-        var testRunTemplate = TemplateService.get("test-run");
-        var resultFile = testRunTemplate(this.testRun);
+        var resultFile = TemplateService.get("test-run")(this.testRun);
+        
         FileService.saveStringToFile("./test-result.xml", resultFile);
+
         this.testRun = undefined;
     }
 }
