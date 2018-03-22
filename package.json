@@ -5,8 +5,8 @@
   "main": "test-reporter.js",
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js",
-    "install-into-dummy-project": "cp -r . ../dummy-project/node_modules/jasmine-testreporter",
-    "run-dummy-project-tests": "cd ../dummy-project && npm run protractor-test",
+    "reinstall-in-dummy-project": "rm -rf ../dummy-project/node_modules/jasmine-testreporter && cp -r . ../dummy-project/node_modules/jasmine-testreporter",
+    "run-dummy-project-tests": "npm run reinstall-in-dummy-project && cd ../dummy-project && npm run protractor-test",
     "run-webdriver-for-dummy-tests": "cd ../dummy-project && npm run webdriver-manager-start"
   },
   "author": "radoslaw.landowski@gmail.com",

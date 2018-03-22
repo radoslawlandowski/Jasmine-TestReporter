@@ -1,11 +1,16 @@
 describe("Test reporter tests", function() {
 
-    describe("test-reporter module", function () {
+    beforeEach(function() {
+        var fakeFileService = {
+            makeDirectory: jasmine.createSpy('makeDirectory'),
+            takeScreenshot: jasmine.createSpy('takeScreenshot'),
+            saveStringToFile: jasmine.createSpy('saveStringToFile')
+        }
+        var reporter = require("../test-reporter");
+        this.testReporter = new reporter(fakeFileService);
+    })
 
-        beforeEach(function() {
-            this.testReporter = require("../test-reporter");
-        });
-        
+    describe("test-reporter module", function () {
         var expectedCallbacks = 
             ["specStarted", 
             "specDone", 
@@ -20,10 +25,6 @@ describe("Test reporter tests", function() {
     });
 
     describe("When jasmine is started", function() {
-        beforeEach(function() {
-            this.testReporter = require("../test-reporter");
-        });
-
         it("test run model is created", function() {
             var suiteInfo = {};
 
@@ -47,10 +48,6 @@ describe("Test reporter tests", function() {
 
     describe("When test suite is started", function() {
 
-        beforeEach(function() {
-            this.testReporter = require("../test-reporter");
-        });
-
         xit("test suite object is added to the main testsuite", function() {
             var suiteInfo = {};
             var result = {};
@@ -67,9 +64,6 @@ describe("Test reporter tests", function() {
     });
 
     describe("When test case is started", function() {
-        beforeEach(function() {
-            this.testReporter = require("../test-reporter");
-        });
 
         xit("it's added to the test suite", function() {
             var suiteInfo = {
@@ -95,9 +89,6 @@ describe("Test reporter tests", function() {
     });
     
     describe("When test case is started", function() {
-        beforeEach(function() {
-            this.testReporter = require("../test-reporter");
-        });
 
         xit("it's added to the test suite", function() {
             var suiteInfo = {};

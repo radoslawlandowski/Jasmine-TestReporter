@@ -3,24 +3,31 @@ var TestSuite = require("./model/test-suite");
 var TestCase = require("./model/test-case");
 var Property = require("./model/property");
 var TemplateService = require("./service/template-service");
-var FileService = require("./service/file-service");
 var TestSuiteMapper = require("./service/mappers/test-suite-mapper");
 var TestCaseMapper = require("./service/mappers/test-case-mapper");
 
 const resultsPath = "./results";
 
-var testReporter = {
-    
-    testRun: undefined,
-    screenshotNumber: 0,
+class TestReporter {
 
-    jasmineStarted: function(suiteInfo) {
+    constructor(fileService) {
+        if(fileService == undefined) {
+            this.fileService = require("./service/file-service");
+        } else {
+            this.fileService = fileService;
+        }
+
+        this.testRun = undefined;
+        this.screenshotNumber = 0;
+    }
+    
+    jasmineStarted(suiteInfo) {
         this.testRun = new TestRun(1, "testRun", new TestSuite(1, "testSuite", "Main testSuite"));
 
-        FileService.makeDirectory(resultsPath);
-    },
+        this.fileService.makeDirectory(resultsPath);
+    }
 
-    suiteStarted: function(result) {
+    suiteStarted(result) {
         var testSuite = TestSuiteMapper.mapSuite(result);
         var parentName = testSuite.fullname.split(new RegExp(testSuite.name))[0].trim();
 
@@ -46,18 +53,18 @@ var testReporter = {
                 }
             }
         }
-    },
+    }
 
-    specStarted: function(result) {
+    specStarted(result) {
 
-    },
+    }
 
-    specDone: function(result) {
+    specDone(result) {
         var testCase = TestCaseMapper.mapSpec(result);
 
         if((result.status === "failed") && browser != undefined) {
             var screenshotName = `screenshot-${this.screenshotNumber++}.jpg`;
-            FileService.takeScreenshot(`${resultsPath}/${screenshotName}`, browser);
+            this.fileService.takeScreenshot(`${resultsPath}/${screenshotName}`, browser);
             testCase.addProperty(new Property("attachment", screenshotName));
         }
 
@@ -81,18 +88,19 @@ var testReporter = {
                 }
             }
         }
-    },
+    }
     
-    suiteDone: function(result) {
-    },
+    suiteDone(result) {
 
-    jasmineDone: function(result) {
+    }
+
+    jasmineDone(result) {
         TemplateService.init();
         var resultFile = TemplateService.get("test-run")(this.testRun);
-        FileService.saveStringToFile(`${resultsPath}/test-result.xml`, resultFile);
+        this.fileService.saveStringToFile(`${resultsPath}/test-result.xml`, resultFile);
         this.testRun = undefined;
     }
 }
 
-module.exports = testReporter;
+module.exports = TestReporter;
 
