@@ -5,9 +5,9 @@
   "main": "test-reporter.js",
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js",
-    "reinstall-in-dummy-project": "rm -rf ../dummy-project/node_modules/jasmine-testreporter && cp -r . ../dummy-project/node_modules/jasmine-testreporter",
-    "run-dummy-project-tests": "npm run reinstall-in-dummy-project && cd ../dummy-project && npm run protractor-test",
-    "run-webdriver-for-dummy-tests": "cd ../dummy-project && npm run webdriver-manager-start"
+    "reinstall-in-dummy-project": "cd ./dummy-project && npm install && cd .. && rm -rf ./dummy-project/node_modules/jasmine-testreporter && rsync -av --progress . ./dummy-project/node_modules/jasmine-testreporter --exclude dummy-project",
+    "run-dummy-project-tests": "npm run reinstall-in-dummy-project && cd ./dummy-project && npm run protractor-test",
+    "run-webdriver-for-dummy-tests": "cd ./dummy-project && npm run webdriver-manager-start"
   },
   "author": "radoslaw.landowski@gmail.com",
   "license": "ISC",

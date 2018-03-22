@@ -65,7 +65,7 @@ class TestReporter {
         if((result.status === "failed") && browser != undefined) {
             var screenshotName = `screenshot-${this.screenshotNumber++}.jpg`;
             this.fileService.takeScreenshot(`${resultsPath}/${screenshotName}`, browser);
-            testCase.addProperty(new Property("attachment", screenshotName));
+            testCase.addProperty(new Property("Attachment", screenshotName));
         }
 
         var suiteName = testCase.fullname.split(new RegExp(testCase.name))[0].trim();
