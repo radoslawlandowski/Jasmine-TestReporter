@@ -4,7 +4,10 @@
   "description": "",
   "main": "test-reporter.js",
   "scripts": {
-    "test": "node_modules/jasmine/bin/jasmine.js"
+    "test": "node_modules/jasmine/bin/jasmine.js",
+    "install-into-dummy-project": "cp -r . ../dummy-project/node_modules/jasmine-testreporter",
+    "run-dummy-project-tests": "cd ../dummy-project && npm run protractor-test",
+    "run-webdriver-for-dummy-tests": "cd ../dummy-project && npm run webdriver-manager-start"
   },
   "author": "radoslaw.landowski@gmail.com",
   "license": "ISC",
