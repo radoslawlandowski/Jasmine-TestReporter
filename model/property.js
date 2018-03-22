@@ -4,3 +4,5 @@ class Property {
         this.value = value;
     }
 }
+
+module.exports = Property;

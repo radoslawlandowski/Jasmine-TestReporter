@@ -1,12 +1,12 @@
 //jasmine.getEnv().addReporter(require("../../test-reporter"));
 
-describe("Fake spec", function() {
+xdescribe("Fake spec", function() {
 
-     it("test run model is created", function() {
-        expect(false).toBeFalsy();
+     xit("test run model is created", function() {
+        expect(true).toBeFalsy();
     });
 
-    it("main test suite is added to test run", function() {
+    xit("main test suite is added to test run", function() {
         
     });
 

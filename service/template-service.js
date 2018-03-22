@@ -1,9 +1,11 @@
 var Handlebars = require('handlebars');
 var FileReader = require('./file-service');
 
+const scriptDirectory = __dirname;
+
 var templateServiceModule = {
 
-    templateBasePath: `${process.cwd()}/templates`,
+    templateBasePath: `${scriptDirectory}/../templates`,
     compiledTemplates: {},
 
     init: function() {
