@@ -1,1 +1,4 @@
 node_modules
+test-result.xml
+dummy-project/node_modules
+dummy-project/results

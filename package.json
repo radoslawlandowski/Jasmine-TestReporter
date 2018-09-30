@@ -1,14 +1,23 @@
-{
+{ 
   "name": "jasmine-testreporter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "test-reporter.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node_modules/jasmine/bin/jasmine.js",
+    "reinstall-in-dummy-project": "cd ./dummy-project && npm install && cd .. && rm -rf ./dummy-project/node_modules/jasmine-testreporter && rsync -av --progress . ./dummy-project/node_modules/jasmine-testreporter --exclude dummy-project",
+    "run-dummy-project-tests": "npm run reinstall-in-dummy-project && cd ./dummy-project && npm run protractor-test",
+    "run-webdriver-for-dummy-tests": "cd ./dummy-project && npm run webdriver-manager-start",
+    "update-webdriver-for-dummy-tests": "cd ./dummy-project && npm run webdriver-manager-update"
   },
-  "author": "",
+  "author": "radoslaw.landowski@gmail.com",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "jasmine": "^3.1.0"
   }

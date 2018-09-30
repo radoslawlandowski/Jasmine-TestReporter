@@ -1,0 +1,17 @@
+{
+  "name": "dummy-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webdriver-manager-update": "./node_modules/protractor/bin/webdriver-manager update",
+    "webdriver-manager-start": "./node_modules/protractor/bin/webdriver-manager start --detach",
+    "protractor-test": "rm -rf ./results && ./node_modules/protractor/bin/protractor ./spec/conf.js && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.1.0",
+    "protractor": "^5.3.0"
+  }
+}
