@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "webdriver-manager-update": "./node_modules/protractor/bin/webdriver-manager update",
-    "webdriver-manager-start": "./node_modules/protractor/bin/webdriver-manager start",
-    "protractor-test": "rm -rf ./results && ./node_modules/protractor/bin/protractor ./spec/conf.js"
+    "webdriver-manager-start": "./node_modules/protractor/bin/webdriver-manager start --detach",
+    "protractor-test": "rm -rf ./results && ./node_modules/protractor/bin/protractor ./spec/conf.js && exit 0"
   },
   "author": "",
   "license": "ISC",

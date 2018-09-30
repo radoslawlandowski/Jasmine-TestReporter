@@ -22,7 +22,7 @@ class TestReporter {
     }
     
     jasmineStarted(suiteInfo) {
-        this.testRun = new TestRun(1, "testRun", new TestSuite(1, "testSuite", "Main testSuite"));
+        this.testRun = new TestRun(1, `TestRun=${new Date().toISOString()}`, new TestSuite(1, "testSuite", "Main testSuite"));
 
         this.fileService.makeDirectory(resultsPath);
     }
