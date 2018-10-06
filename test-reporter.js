@@ -23,7 +23,7 @@ class TestReporter {
     }
     
     jasmineStarted(suiteInfo) {
-        this.testRun = new TestRun(1, `TestRun=${new Date().toISOString()}`, new TestSuite(1, "testSuite", "Main testSuite"));
+        this.testRun = new TestRun(1, `TestRun-${new Date().toISOString()}`, new TestSuite(1, "testSuite", "Main testSuite"));
 
         this.fileService.makeDirectory(resultsPath);
     }
@@ -99,14 +99,17 @@ class TestReporter {
     jasmineDone(result) {
         TemplateService.init();
         var resultFile = TemplateService.get("test-run")(this.testRun);
+
         var resultFileName = 'test-result.xml';
         var resultFilePath = `${resultsPath}/${resultFileName}`;
         this.fileService.saveStringToFile(resultFilePath, resultFile);
         this.testRun = undefined;
         this.files.push(resultFileName);
+
         var now = new Date();
         var zipPath = `${resultsPath}/results-${now.getFullYear()}-${now.getMonth()}-${now.getDay()}_${now.getHours()}-${now.getMinutes()}.zip`;
         this.fileService.zipFile(zipPath, resultsPath, this.files)
+        
         HttpCommunicationService.sendFile(zipPath, 'localhost:11114', 'test')
     }
 }
