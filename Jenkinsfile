@@ -37,7 +37,7 @@ pipeline {
             }
         }
       steps {
-        git(url: 'https://github.com/radoslawlandowski/TestReporter', branch: "${env.GIT_BRANCH}")
+        git(url: 'https://github.com/radoslawlandowski/Jasmine-TestReporter', branch: "${env.GIT_BRANCH}")
       }
     }
     stage('Git Checkout by tag') {
@@ -47,51 +47,27 @@ pipeline {
             }
         }
       steps {
-        git(url: 'https://github.com/radoslawlandowski/TestReporter', branch: "${env.GIT_BRANCH}")
+        git(url: 'https://github.com/radoslawlandowski/Jasmine-TestReporter', branch: "${env.GIT_BRANCH}")
       }
     }
-    stage('Build images') {
-      failFast true
-      parallel {
-        stage('api') {
-          steps {
-            dir(path: './api') {
-              ansiColor(colorMapName: 'xterm') {
-                sh "docker build -t ${env.API_IMAGE_NAME} ."
-              }
-              
-            }
-            
-          }
+
+    stage('Build code') {
+        steps {
+            sh 'npm install'
+            sh 'npm test'
         }
-        stage('db') {
-          steps {
-            dir(path: './db') {
-              ansiColor(colorMapName: 'xterm') {
-                sh "docker build -t ${env.DB_IMAGE_NAME} ."
-              }
-              
-            }
-            
-          }
-        }
-        stage('front') {
-          steps {
-            dir(path: './frontend') {
-              ansiColor(colorMapName: 'xterm') {
-                sh "docker build -t ${env.FRONT_IMAGE_NAME} ."
-              }
-              
-            }
-            
-          }
-        }
-      }
     }
-    stage('New branch') {
-      steps {
-        echo 'asd'
-      }
+
+    stage('Run dummy project tests with testreporter') {
+        steps {
+            script {
+              try {
+                  sh 'npm run run-dummy-project-tests'
+              } catch (Exception e) {
+                  echo 'Dummy test executed and failed as expected!'
+              }
+            }
+        }
     }
   }
 }

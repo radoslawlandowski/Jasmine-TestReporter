@@ -1,4 +1,6 @@
 var fs = require('fs');
+var zip = new require('node-zip')();
+var path = require('path');
 
 var fileServiceModule = {
     readAsString: function(filename) {
@@ -24,6 +26,16 @@ var fileServiceModule = {
         browser.takeScreenshot().then(function (png) {
             self.__writeScreenShot(png, fileName);
         });
+    },
+
+    zipFile: function(outputFilename, baseDir, fileNames) {
+        for(var i = 0 ; i < fileNames.length ; i++) {
+            zip.file(fileNames[i], fs.readFileSync(path.join(baseDir, fileNames[i])));
+        }
+        
+        var data = zip.generate({ base64:false, compression: 'DEFLATE' });
+        
+        fs.writeFileSync(outputFilename, data, 'binary');
     },
 
     __writeScreenShot: function(data, filename) {
