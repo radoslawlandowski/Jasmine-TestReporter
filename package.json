@@ -5,7 +5,7 @@
   "main": "test-reporter.js",
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js",
-    "reinstall-in-dummy-project": "cd ./dummy-project && npm install && cd .. && rm -rf ./dummy-project/node_modules/jasmine-testreporter && rsync -av --progress . ./dummy-project/node_modules/jasmine-testreporter --exclude dummy-project",
+    "reinstall-in-dummy-project": "cd ./dummy-project && npm install && cd .. && rm -rf ./dummy-project/node_modules/jasmine-testreporter && rsync -av --progress . ./dummy-project/node_modules/jasmine-testreporter --exclude dummy-project --exclude .git",
     "run-dummy-project-tests": "npm run reinstall-in-dummy-project && cd ./dummy-project && npm run protractor-test",
     "run-webdriver-for-dummy-tests": "cd ./dummy-project && npm run webdriver-manager-start",
     "update-webdriver-for-dummy-tests": "cd ./dummy-project && npm run webdriver-manager-update"

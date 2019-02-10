@@ -110,7 +110,7 @@ class TestReporter {
         var zipPath = `${resultsPath}/results-${now.getFullYear()}-${now.getMonth()}-${now.getDay()}_${now.getHours()}-${now.getMinutes()}.zip`;
         this.fileService.zipFile(zipPath, resultsPath, this.files)
         
-        HttpCommunicationService.sendFile(zipPath, 'localhost:11114', 'test')
+        HttpCommunicationService.sendFile(zipPath, 'localhost:11112', 'test')
     }
 }
 
